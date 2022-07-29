@@ -78,7 +78,9 @@ class KamarController extends Controller
      */
     public function update(Request $request, Kamar $kamar)
     {
-        //
+        $kamar->update($request->all());
+        
+        return redirect()->route('kamar.index')->with('success','Data Berhasil di Update');
     }
 
     /**
@@ -91,4 +93,10 @@ class KamarController extends Controller
     {
         //
     }
+
+    // public function kamar()
+    // {
+    //     $datakamar = kamar::all();
+    //     return view('index', compact('datakamar'));
+    // }
 }

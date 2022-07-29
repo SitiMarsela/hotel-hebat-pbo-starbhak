@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Hotel;
 use Illuminate\Http\Request;
 
-
 class FasilitasHotelController extends Controller
 {
     /**
@@ -15,8 +14,8 @@ class FasilitasHotelController extends Controller
      */
     public function index()
     {
-        $datafasilitas = Hotel::latest()->paginate(5);
-        return view ('fasilitas-hotel.index',compact('datafasilitas'))->with('i', (request()->input('page', 1) - 1) * 5);
+        $datahotel = Hotel::latest()->paginate(5);
+        return view ('fasilitas-hotel.index',compact('datahotel'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -66,8 +65,8 @@ class FasilitasHotelController extends Controller
      */
     public function edit(Request $request, $id)
     {
-        $datafasilitas = Hotel::find($id);
-        return view('fasilitas-hotel.edit',compact('datafasilitas'));
+        $datahotel = Hotel::find($id);
+        return view('fasilitas-hotel.edit',compact('datahotel'));
     }
 
     /**
@@ -79,7 +78,9 @@ class FasilitasHotelController extends Controller
      */
     public function update(Request $request, Hotel $hotel)
     {
-        //
+        $hotel->update($request->all());
+        
+        return redirect()->route('fasilitas-hotel.index')->with('success','Data Berhasil di Update');
     }
 
     /**
