@@ -22,7 +22,7 @@
 
 
 #home{
-    background-image: url(./carousel3.jpg);
+    background-image: url(./carousel3.jfif);
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
@@ -30,15 +30,6 @@
     color: white;
 }
 
-#home .container{
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(15, 23, 43, .7);
-    z-index: 1;
-    width: 100%;
-}
 
 #home .container .latar{
     padding: 200px 0;
