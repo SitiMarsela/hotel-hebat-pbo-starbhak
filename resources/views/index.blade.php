@@ -77,7 +77,7 @@
                 </div>
                 <div class="col-md-8 px-5">
                     <h5 class="fw-bold my-3"><span style="color:#FEA116">ABOUT US</span></h5>
-                    <h1 class="fw-bold my-3">Welcome to <span style="color:#FEA116">HOTEL</span></h1>
+                    <h1 class="fw-bold my-3">WELCOME TO <span style="color:#FEA116">HOTEL</span></h1>
                     <h1 class="fw-bold my-3"><span style="color:#FEA116">HEBAT</span></h1>
                     <p class="my-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.</p>
                     <a class="btn btn-primary py-3 px-5" href="">Explore More</a>
@@ -91,8 +91,8 @@
 
     <section id="room">
         <div class="container my-5">
-            <h5 class="fw-bold my-2 text-center"><span style="color:#FEA116">ABOUT US</span></h5>
-            <h1 class="fw-bold text-center my-3">Explore Our <span style="color:#FEA116">ROOMS</span></h1>
+            <h5 class="fw-bold my-2 text-center"><span style="color:#FEA116">OUR ROOMS</span></h5>
+            <h1 class="fw-bold text-center my-3">EXPLORE OUR <span style="color:#FEA116">ROOMS</span></h1>
 
             <div class="row g-4">
               <div class="col-lg-4 col-md-6 my-5">
@@ -193,7 +193,7 @@
     <section id="hotel">
       <div class="container my-5">
           <h5 class="fw-bold my-2 text-center"><span style="color:#FEA116">FACILITY HOTEL</span></h5>
-          <h1 class="fw-bold text-center my-3">Explore Our <span style="color:#FEA116">HOTEL</span></h1>
+          <h1 class="fw-bold text-center my-3">EXPLORE OUR <span style="color:#FEA116">HOTEL</span></h1>
           <div class="row g-4">
             <div class="col-lg-4 col-md-6 my-5">
               <div class="hotel-item shadow rounded overflow-hidden">

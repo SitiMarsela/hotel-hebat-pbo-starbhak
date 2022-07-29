@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kamar;
 use App\Models\Pemesanan;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,9 @@ class PemesananController extends Controller
      */
     public function create()
     {
-        //
+        $datapesanan = Pemesanan::all();
+        
+        return view('booking',compact('datapesanan'));
     }
 
     /**
@@ -36,7 +39,9 @@ class PemesananController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Pemesanan::create($request->all());
+
+        return redirect()->route('home')->with('success','Data Berhasil di Input');
     }
 
     /**
