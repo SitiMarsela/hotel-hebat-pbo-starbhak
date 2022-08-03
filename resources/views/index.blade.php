@@ -93,7 +93,10 @@
         <div class="container my-5">
             <h5 class="fw-bold my-2 text-center"><span style="color:#FEA116">OUR ROOMS</span></h5>
             <h1 class="fw-bold text-center my-3">EXPLORE OUR <span style="color:#FEA116">ROOMS</span></h1>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8dfce8a738c1afc42971c7deec2abda3aed93fcc
             <div class="row g-4">
               <div class="col-lg-4 col-md-6 my-5">
                 <div class="room-item shadow rounded overflow-hidden">
@@ -115,7 +118,11 @@
                         <div class="d-flex mb-3">
                             <small class="border-end me-3 pe-3"><i class="fa fa-bed"></i></small>
                             <small class="border-end me-3 pe-3"><i class="fa fa-bath"></i></small>
+<<<<<<< HEAD
                             <small><i class="fa fa-wifi me-2"></i></small>
+=======
+                            <small class="border-end me-3 pe-3"><i class="fa fa-wifi"></i></small>
+>>>>>>> 8dfce8a738c1afc42971c7deec2abda3aed93fcc
                         </div>
                         <p class="text-body mb-3">Di lengkapi dengan fasilitas AC, TV, Bath, Wifi.</p>
                         <div class="d-flex justify-content-between">
@@ -146,7 +153,11 @@
                       <div class="d-flex mb-3">
                           <small class="border-end me-3 pe-3"><i class="fa fa-bed"></i></small>
                           <small class="border-end me-3 pe-3"><i class="fa fa-bath"></i></small>
+<<<<<<< HEAD
                           <small><i class="fa fa-wifi me-2"></i></small>
+=======
+                          <small class="border-end me-3 pe-3"><i class="fa fa-wifi"></i></small>
+>>>>>>> 8dfce8a738c1afc42971c7deec2abda3aed93fcc
                       </div>
                       <p class="text-body mb-3">Di lengkapi dengan fasilitas AC, TV, Bath, Wifi.</p>
                       <div class="d-flex justify-content-between">
@@ -176,7 +187,11 @@
                     <div class="d-flex mb-3">
                         <small class="border-end me-3 pe-3"><i class="fa fa-bed"></i></small>
                         <small class="border-end me-3 pe-3"><i class="fa fa-bath"></i></small>
+<<<<<<< HEAD
                         <small><i class="fa fa-wifi me-2"></i></small>
+=======
+                        <small class="border-end me-3 pe-3"><i class="fa fa-wifi"></i></small>
+>>>>>>> 8dfce8a738c1afc42971c7deec2abda3aed93fcc
                     </div>
                     <p class="text-body mb-3">Di lengkapi dengan fasilitas AC, TV + Netflix, Bath, Wifi.</p>
                     <div class="d-flex justify-content-between">
