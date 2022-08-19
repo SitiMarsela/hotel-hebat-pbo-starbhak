@@ -16,7 +16,10 @@ return new class extends Migration
         Schema::create('kamar', function (Blueprint $table) {
             $table->id();
             $table->string('type_kamar');
+            $table->string('url_gambar');
             $table->string('nama_fasilitas');
+            $table->integer('harga');
+            $table->string('deskripsi');
             $table->integer('jml_kamar');
             $table->timestamps();
         });
