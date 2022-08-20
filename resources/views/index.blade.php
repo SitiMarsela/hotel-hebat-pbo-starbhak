@@ -32,7 +32,7 @@
     <section id="home">
       <div class="container">
         <div class="latar">
-          <h5 class="fw-bold">LUXURY LIVING</h5>
+          <h5 class="fw-bold">LUXURY LIVING.</h5>
           <h1 class="py-2 fw-bold text-uppercase">Discover a Brand <br> Hotel Hebat</h1>
           <a class="btn btn-primary fw-bold my-5 py-3 px-5" href="">BOOKING SEKARANG</a>
       </div>
