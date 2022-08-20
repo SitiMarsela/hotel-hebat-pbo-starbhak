@@ -14,7 +14,6 @@ class HotelController extends Controller
 
     public function index()
     {
-
         $fasilitashotel = Hotel::latest()->paginate(5);
 
         return new HotelResource(true, 'List Data Fasilitas Hotel', $fasilitashotel);
@@ -22,7 +21,6 @@ class HotelController extends Controller
 
     public function store(Request $request)
     {
- 
         $validator = Validator::make($request->all(), [
             'nama_fasilitas_hotel'   => 'required',
             'deskripsi'              => 'required',
@@ -47,13 +45,11 @@ class HotelController extends Controller
 
     public function show(Hotel $fasilitashotel)
     {
-
         return new HotelResource(true, 'Data Fasilitas Hotel Ditemukan!', $fasilitashotel);
     }
 
     public function update(Request $request, Hotel $fasilitashotel)
     {
-
         $validator = Validator::make($request->all(), [
             'nama_fasilitas_hotel'   => 'required',
             'deskripsi'              => 'required',
@@ -90,7 +86,6 @@ class HotelController extends Controller
 
     public function destroy(Hotel $fasilitashotel)
     {
-
         Storage::delete('public/kamar/'.$fasilitashotel->image);
 
         $fasilitashotel->delete();

@@ -15,7 +15,9 @@ return new class extends Migration
     {
         Schema::create('pemesanan', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id')->unsigned()->nullable();
+            $table->string('nama_pemesan');
+            $table->string('email');
+            $table->string('telp');
             $table->bigInteger('kamar_id')->unsigned()->nullable();
             $table->string('nama_tamu');
             $table->date('tgl_checkin');
@@ -24,7 +26,6 @@ return new class extends Migration
             $table->string('status');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('kamar_id')->references('id')->on('kamar');
         });
     }
