@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class KamarResource extends JsonResource
+class PemesananResource extends JsonResource
 {
 
     public $status;
@@ -16,7 +16,7 @@ class KamarResource extends JsonResource
      * @param  \Illuminate\Http\Request  $request
      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
-
+   
     public function __construct($status, $message, $resource)
     {
         parent::__construct($resource);

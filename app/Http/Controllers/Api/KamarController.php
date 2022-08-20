@@ -50,13 +50,11 @@ class KamarController extends Controller
 
     public function show(Kamar $kamar)
     {
-
         return new KamarResource(true, 'Data Kamar Ditemukan!', $kamar);
     }
 
     public function update(Request $request, Kamar $kamar)
     {
-
         $validator = Validator::make($request->all(), [
             'type_kamar'     => 'required',
             'url_gambar'     => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -102,7 +100,6 @@ class KamarController extends Controller
 
     public function destroy(Kamar $kamar)
     {
-
         Storage::delete('public/kamar/'.$kamar->image);
 
         $kamar->delete();
