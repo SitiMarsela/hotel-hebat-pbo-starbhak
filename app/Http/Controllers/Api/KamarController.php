@@ -13,9 +13,9 @@ class KamarController extends Controller
 {
     public function index()
     {
-        $kamar = Kamar::latest()->paginate(5);
+        $kamars = Kamar::latest()->get();
 
-        return new KamarResource(true, 'List Data Kamar', $kamar);
+        return new KamarResource(true, 'List Data Kamar', $kamars);
     }
 
     public function store(Request $request)
