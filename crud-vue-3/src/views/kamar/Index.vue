@@ -30,8 +30,8 @@
                                     <td>{{ kamar.jml_kamar }}</td>
                                     <td class="text-center">
                                         <router-link :to="{name: 'kamar.edit-kamar', params:{id: kamar.id }}"
-                                            class="btn btn-sm btn-primary mr-1">EDIT</router-link>
-                                        <button @click.prevent="kamarDelete(kamar.id)" class="btn btn-sm btn-danger ml-1">DELETE</button>
+                                            class="btn btn-sm btn-primary mx-2">EDIT</router-link>
+                                        <button @click.prevent="kamarDelete(kamar.id)" class="btn btn-sm btn-danger">DELETE</button>
                                     </td>
                                 </tr>
                             </tbody>
