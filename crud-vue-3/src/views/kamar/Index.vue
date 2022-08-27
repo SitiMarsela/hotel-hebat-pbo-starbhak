@@ -31,7 +31,7 @@
                                     <td class="text-center">
                                         <router-link :to="{name: 'kamar.edit-kamar', params:{id: kamar.id }}"
                                             class="btn btn-sm btn-primary mr-1">EDIT</router-link>
-                                        <button class="btn btn-sm btn-danger ml-1">DELETE</button>
+                                        <button @click.prevent="kamarDelete(kamar.id)" class="btn btn-sm btn-danger ml-1">DELETE</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -57,7 +57,7 @@
 
             //reactive state
             let kamars = ref([])
-
+ 
             //mounted
             onMounted(() => {
 
@@ -74,9 +74,25 @@
 
             })
 
+            function kamarDelete(id) {
+            
+   //delete data post by ID
+   axios.delete(`http://localhost:8000/api/kamar/${id}`)
+   .then(() => {
+              
+       //splice posts 
+       kamars.value.splice(kamars.value.indexOf(id), 1);
+
+    }).catch(error => {
+        console.log(error.response.data)
+    })
+
+}
+
             //return
             return {
-                kamars
+                kamars,
+                kamarDelete
             }
 
         }
