@@ -22,7 +22,6 @@ class KamarController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'type_kamar'     => 'required',
-            'url_gambar'     => 'required',
             'nama_fasilitas'   => 'required',
             'harga'   => 'required',
             'deskripsi'   => 'required',
@@ -33,12 +32,8 @@ class KamarController extends Controller
             return response()->json($validator->errors(), 422);
         }
 
-        // $image = $request->file('url_gambar');
-        // $image->storeAs('public/kamar', $image->hashName());
-
         $kamar = Kamar::create([
             'type_kamar'     => $request->type_kamar,
-            'url_gambar'     => $request->url_gambar,
             'nama_fasilitas'   => $request->nama_fasilitas,
             'harga'  => $request->harga,
             'deskripsi' => $request->deskripsi,
@@ -57,7 +52,6 @@ class KamarController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'type_kamar'     => 'required',
-            'url_gambar'     => 'required',
             'nama_fasilitas'   => 'required',
             'harga'   => 'required',
             'deskripsi'   => 'required',
@@ -68,27 +62,8 @@ class KamarController extends Controller
             return response()->json($validator->errors(), 422);
         }
 
-        // if ($request->hasFile('url_gambar')) {
-
-        //     $image = $request->file('url_gambar');
-        //     $image->storeAs('public/kamar', $image->hashName());
-
-        //     Storage::delete('public/kamar/'.$kamar->image);
-
-        //     $kamar->update([
-        //         'type_kamar'     => $request->type_kamar,
-        //         'url_gambar'     => $image->hashName(),
-        //         'nama_fasilitas'   => $request->nama_fasilitas,
-        //         'harga'  => $request->harga,
-        //         'deskripsi' => $request->deskripsi,
-        //         'jml_kamar'  => $request->jml_kamar,
-        //     ]);
-
-        // } else {
-
         $kamar->update([
             'type_kamar'     => $request->type_kamar,
-            'url_gambar'   => $request->url_gambar,
             'nama_fasilitas'   => $request->nama_fasilitas,
             'harga'  => $request->harga,
             'deskripsi' => $request->deskripsi,

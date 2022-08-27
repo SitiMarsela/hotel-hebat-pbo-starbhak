@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('nama_fasilitas_hotel');
             $table->text('deskripsi');
-            $table->text('url_gambar');
             $table->timestamps();
         });
     }
