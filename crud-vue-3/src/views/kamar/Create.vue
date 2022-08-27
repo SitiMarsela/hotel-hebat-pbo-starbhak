@@ -20,7 +20,10 @@
                             <div class="form-group">
                                 <label for="url" class="font-weight-bold">Url Gambar</label>
                                 <input type="text" class="form-control" v-model="kamar.url_gambar" placeholder="Masukkan Url Gambar">
-                                  <!-- validation -->
+
+
+                                <!-- validation -->
+
                                 <div v-if="validation.url_gambar" class="mt-2 alert alert-danger">
                                     {{ validation.url_gambar[0] }}
                                 </div>
@@ -77,7 +80,7 @@ import { useRouter } from 'vue-router'
 import axios from 'axios'
 
 export default {
-        name: 'create-kamar',
+    name: 'create-kamar',
     setup() {
 
         //state kamar
@@ -87,7 +90,7 @@ export default {
             nama_fasilitas: '',
             harga: '',
             deskripsi: '',
-            jml_kamar: '',
+            jml_kamar: ''
         })
 
         //state validation
@@ -99,12 +102,12 @@ export default {
         //method store
         function store() {
 
-            let type_kamar   = kamar.type_kamar
-            let url_gambar = kamar.url_gambar
-            let nama_fasilitas = kamar.nama_fasilitas
-            let harga = kamar.harga
-            let deskripsi = kamar.deskripsi
-            let jml_kamar = kamar.jml_kamar
+            let type_kamar      =    kamar.type_kamar
+            let url_gambar      =    kamar.url_gambar
+            let nama_fasilitas  =    kamar.nama_fasilitas
+            let harga           =    kamar.harga
+            let deskripsi       =    kamar.deskripsi
+            let jml_kamar       =    kamar.jml_kamar
 
             axios.post('http://localhost:8000/api/kamar', {
                 type_kamar: type_kamar,
