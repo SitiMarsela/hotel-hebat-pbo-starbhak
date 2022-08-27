@@ -76,18 +76,18 @@
 
             function kamarDelete(id) {
             
-   //delete data post by ID
-   axios.delete(`http://localhost:8000/api/kamar/${id}`)
-   .then(() => {
+            //delete data post by ID
+            axios.delete(`http://localhost:8000/api/kamar/${id}`)
+                .then(() => {
               
-       //splice posts 
-       kamars.value.splice(kamars.value.indexOf(id), 1);
+                    //splice posts 
+                    kamars.value.splice(kamars.value.indexOf(id), 1);
 
-    }).catch(error => {
-        console.log(error.response.data)
-    })
+                }).catch(error => {
+                    console.log(error.response.data)
+                })
 
-}
+            }
 
             //return
             return {

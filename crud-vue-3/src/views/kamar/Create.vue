@@ -19,8 +19,8 @@
 
                             <div class="form-group">
                                 <label for="url" class="font-weight-bold">Url Gambar</label>
-                                <input type="text" class="form-control" v-on="kamar.url_gambar" placeholder="Masukkan Url Gambar">
-                                <!-- validation -->
+                                <input type="text" class="form-control" v-model="kamar.url_gambar" placeholder="Masukkan Url Gambar">
+                                  <!-- validation -->
                                 <div v-if="validation.url_gambar" class="mt-2 alert alert-danger">
                                     {{ validation.url_gambar[0] }}
                                 </div>
