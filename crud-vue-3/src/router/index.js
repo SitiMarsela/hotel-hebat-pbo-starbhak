@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 //define a routes
 const routes = [
+
+    // Route Kamar
     {
         path: '/kamar',
         name: 'kamar.index-kamar',
@@ -19,7 +21,7 @@ const routes = [
         component: () => import( /* webpackChunkName: "kamar.edit" */ '@/views/kamar/Edit.vue')
     },
 
-
+    // Route Fasilitas Hotel
     {
         path: '/fasilitas',
         name: 'fasilitas.index-fasilitas',
@@ -36,21 +38,22 @@ const routes = [
         component: () => import( /* webpackChunkName: "fasilitas.edit" */ '@/views/fasilitas/Edit.vue')
     },
 
-    // {
-    //     path: '/pemesanan',
-    //     name: 'pemesanan.index-pemesanan',
-    //     component: () => import( /* webpackChunkName: "pemesanan.index" */ '@/views/pemesanan/Index.vue')
-    // },
-    // {
-    //     path: '/pemesanan/create',
-    //     name: 'pemesanan.create-pemesanan',
-    //     component: () => import( /* webpackChunkName: "pemesanan.create" */ '@/views/pemesanan/Create.vue')
-    // },
-    // {
-    //     path: '/pemesanan/edit/:id',
-    //     name: 'pemesanan.edit-pemesanan',
-    //     component: () => import( /* webpackChunkName: "pemesanan.edit" */ '@/views/pemesanan/Edit.vue')
-    // }
+    // Route Pemesanan
+    {
+        path: '/pemesanan',
+        name: 'pemesanan.index-pemesanan',
+        component: () => import( /* webpackChunkName: "pemesanan.index" */ '@/views/pemesanan/Index.vue')
+    },
+    {
+        path: '/pemesanan/create',
+        name: 'pemesanan.create-pemesanan',
+        component: () => import( /* webpackChunkName: "pemesanan.create" */ '@/views/pemesanan/Create.vue')
+    },
+    {
+        path: '/pemesanan/edit/:id',
+        name: 'pemesanan.edit-pemesanan',
+        component: () => import( /* webpackChunkName: "pemesanan.edit" */ '@/views/pemesanan/Edit.vue')
+    }
 ]
 
 //create router
