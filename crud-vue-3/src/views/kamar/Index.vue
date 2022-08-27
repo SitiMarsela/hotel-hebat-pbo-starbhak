@@ -12,7 +12,6 @@
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">Type Kamar</th>
-                                    <th scope="col">url Gambar</th>
                                     <th scope="col">Nama Fasilitas</th>
                                     <th scope="col">Harga</th>
                                     <th scope="col">Deskripsi</th>
@@ -23,7 +22,6 @@
                             <tbody>
                                 <tr v-for="(kamar, index) in kamars" :key="index">
                                     <td>{{ kamar.type_kamar }}</td>
-                                    <td>{{ kamar.url_gambar }}</td>
                                     <td>{{ kamar.nama_fasilitas }}</td>
                                     <td>{{ kamar.harga }}</td>
                                     <td>{{ kamar.deskripsi }}</td>

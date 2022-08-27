@@ -10,7 +10,7 @@
                         <form @submit.prevent="update">
                             <div class="form-group">
                                 <label for="type_kamar" class="font-weight-bold">Type Kamar</label>
-                                <input type="text" class="form-control" v-model="kamar.type_kamar" placeholder="Masukkan Type Kamar">
+                                <input type="text" class="form-control my-2" v-model="kamar.type_kamar" placeholder="Masukkan Type Kamar">
                                 <!-- validation -->
                                 <div v-if="validation.type_kamar" class="mt-2 alert alert-danger">
                                     {{ validation.type_kamar[0] }}
@@ -18,17 +18,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="url" class="font-weight-bold">Url Gambar</label>
-                                <input type="text" class="form-control" v-model="kamar.url_gambar" placeholder="Masukkan Url Gambar">
-                                <!-- validation -->
-                                <div v-if="validation.url_gambar" class="mt-2 alert alert-danger">
-                                    {{ validation.url_gambar[0] }}
-                                </div>
-                            </div>
-
-                            <div class="form-group">
                                 <label for="url" class="font-weight-bold">Nama Fasilitas</label>
-                                <input type="text" class="form-control" v-model="kamar.nama_fasilitas" placeholder="Masukkan Nama Fasilitas">
+                                <input type="text" class="form-control my-2" v-model="kamar.nama_fasilitas" placeholder="Masukkan Nama Fasilitas">
                                 <!-- validation -->
                                 <div v-if="validation.nama_fasilitas" class="mt-2 alert alert-danger">
                                     {{ validation.nama_fasilitas[0] }}
@@ -37,7 +28,7 @@
 
                             <div class="form-group">
                                 <label for="url" class="font-weight-bold">harga</label>
-                                <input type="text" class="form-control" v-model="kamar.harga" placeholder="Masukkan Harga">
+                                <input type="text" class="form-control my-2" v-model="kamar.harga" placeholder="Masukkan Harga">
                                 <!-- validation -->
                                 <div v-if="validation.harga" class="mt-2 alert alert-danger">
                                     {{ validation.harga[0] }}
@@ -46,7 +37,7 @@
 
                             <div class="form-group">
                                 <label for="deskripsi" class="font-weight-bold">Deskripsi</label>
-                                <textarea class="form-control" rows="4" v-model="kamar.deskripsi" placeholder="Masukkan Deskripsi"></textarea>
+                                <textarea class="form-control my-2" rows="4" v-model="kamar.deskripsi" placeholder="Masukkan Deskripsi"></textarea>
                                 <!-- validation -->
                                 <div v-if="validation.deskripsi" class="mt-2 alert alert-danger">
                                     {{ validation.deskripsi[0] }}
@@ -55,13 +46,13 @@
 
                             <div class="form-group">
                                 <label for="url" class="font-weight-bold">Jumlah Kamar</label>
-                                <input type="text" class="form-control" v-model="kamar.jml_kamar" placeholder="Masukkan Jumlah Kamar">
+                                <input type="text" class="form-control my-2" v-model="kamar.jml_kamar" placeholder="Masukkan Jumlah Kamar">
                                 <!-- validation -->
                                 <div v-if="validation.jml_kamar" class="mt-2 alert alert-danger">
                                     {{ validation.jml_kamar[0] }}
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">SIMPAN</button>
+                            <button type="submit" class="btn btn-primary my-2">SIMPAN</button>
                         </form>                        
 
                     </div>
@@ -83,7 +74,6 @@ export default {
         //state posts
         const kamar = reactive({
            type_kamar: '',
-           url_gambar: '',
            nama_fasilitas: '',
            harga: '',
            deskripsi: '',
@@ -108,7 +98,6 @@ export default {
               
               //assign state posts with response data
               kamar.type_kamar      =   response.data.data.type_kamar
-              kamar.url_gambar      =   response.data.data.url_gambar  
               kamar.nama_fasilitas  =   response.data.data.nama_fasilitas
               kamar.harga           =   response.data.data.harga  
               kamar.deskripsi       =   response.data.data.deskripsi 
@@ -124,7 +113,6 @@ export default {
         function update() {
 
             let type_kamar      =   kamar.type_kamar
-            let url_gambar      =   kamar.url_gambar
             let nama_fasilitas  =   kamar.nama_fasilitas
             let harga           =   kamar.harga
             let deskripsi       =   kamar.deskripsi
@@ -132,7 +120,6 @@ export default {
 
             axios.put(`http://localhost:8000/api/kamar/${route.params.id}`, {
                 type_kamar: type_kamar,
-                url_gambar: url_gambar,
                 nama_fasilitas: nama_fasilitas,
                 harga: harga,
                 deskripsi: deskripsi,
