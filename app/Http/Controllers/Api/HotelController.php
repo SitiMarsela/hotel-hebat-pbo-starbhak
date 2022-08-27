@@ -14,9 +14,9 @@ class HotelController extends Controller
 
     public function index()
     {
-        $fasilitashotel = Hotel::latest()->paginate(5);
+        $fasilitashotels = Hotel::latest()->get();
 
-        return new HotelResource(true, 'List Data Fasilitas Hotel', $fasilitashotel);
+        return new HotelResource(true, 'List Data Fasilitas Hotel', $fasilitashotels);
     }
 
     public function store(Request $request)
@@ -24,20 +24,15 @@ class HotelController extends Controller
         $validator = Validator::make($request->all(), [
             'nama_fasilitas_hotel'   => 'required',
             'deskripsi'              => 'required',
-            'url_gambar'             => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         if ($validator->fails()) {
             return response()->json($validator->errors(), 422);
         }
 
-        $image = $request->file('url_gambar');
-        $image->storeAs('public/hotel', $image->hashName());
-
         $fasilitashotel = Hotel::create([
             'nama_fasilitas_hotel' => $request->nama_fasilitas_hotel,
             'deskripsi'            => $request->deskripsi,
-            'url_gambar'           => $image->hashName(),
         ]);
 
         return new HotelResource(true, 'Data Fasilitas Hotel Berhasil Ditambahkan!', $fasilitashotel);
@@ -53,33 +48,17 @@ class HotelController extends Controller
         $validator = Validator::make($request->all(), [
             'nama_fasilitas_hotel'   => 'required',
             'deskripsi'              => 'required',
-            'url_gambar'             => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
          if ($validator->fails()) {
             return response()->json($validator->errors(), 422);
         }
 
-        if ($request->hasFile('url_gambar')) {
-
-            $image = $request->file('url_gambar');
-            $image->storeAs('public/hotel', $image->hashName());
-
-            Storage::delete('public/hotel/'.$fasilitashotel->image);
-
-            $fasilitashotel->update([
-                'nama_fasilitas_hotel' => $request->nama_fasilitas_hotel,
-                'deskripsi'            => $request->deskripsi,
-                'url_gambar'           => $image->hashName(),
-            ]);
-
-        } else {
-
             $fasilitashotel->update([
                 'nama_fasilitas_hotel' => $request->nama_fasilitas_hotel,
                 'deskripsi'            => $request->deskripsi,
             ]);
-        }
+        // }
 
         return new HotelResource(true, 'Data Fasilitas Hotel Berhasil Diubah!', $fasilitashotel);
     }
